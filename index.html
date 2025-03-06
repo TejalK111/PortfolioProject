@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Web Developer">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>My Portfolio</h1>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-list">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm a web developer passionate about creating accessible and user-friendly websites.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="project1.png" alt="Screenshot of Project 1" onclick="openLightbox(this)">
+            <p>Project 1 - A responsive web application</p>
+        </div>
+        <div class="project-card">
+            <img src="project2.png" alt="Screenshot of Project 2" onclick="openLightbox(this)">
+            <p>Project 2 - A JavaScript-based interactive tool</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form" onsubmit="validateForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="form-message"></p>
+        </form>
+    </section>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img src="" id="lightbox-img" alt="Enlarged Project Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
